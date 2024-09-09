@@ -1,0 +1,74 @@
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f7f7f7;
+        }
+
+        .signup-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        .h2 {
+            margin-top: 150px;
+        }
+
+        .or-divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 20px 0;
+            width: 200px;
+            justify-content: center;
+            padding-left: 80px;
+        }
+
+        .or-divider hr {
+            flex: 1;
+            border: none;
+            border-top: 1px solid black;
+
+
+        }
+
+        .or-divider span {
+            padding: 0 10px;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .sns-container {
+            align-items: center;
+        }
+
+        .signup-container .email-signup-btn {
+            padding: 10px;
+            color: black;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 11px;
+            margin-left: 10px;
+            width: 200px;
+            height: 50px;
+        }
+
+        .signup-container .email-signup-btn a {
+            text-decoration: none;
+            color: #333;
+        }
+        .login-link{
+            color: black;
+        }
+        .signup-container h6{
+            margin-top: 50px;
+        }

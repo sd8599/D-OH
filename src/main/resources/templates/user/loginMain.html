@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loginMain</title>
+    <link rel="stylesheet" href="/css/user/loginMain.css">
+</head>
+<body>
+
+<div class="signup-container">
+    <form action="/loginMain" method="post" enctype="multipart/form-data">
+    <h1><img th:src="@{img/logoG.png}" alt="D'OH Logo"></h1>
+    <div class="h2">
+        <h2>반가워요</h2>
+    </div>
+    <div class="or-divider">
+        <hr><span>또는</span>
+        <hr>
+    </div>
+    <div class="sns-container">
+        <button type="button" id="email-signup-btn" class="email-signup-btn">
+            <a href="test.html"><strong>이메일로가입하기</strong></a>
+        </button>
+    </div>
+    <h6>이미계정이 있으신가요?
+        <a href="/login" class="login-link">로그인하기</a>
+<!--        <button type="button" id="signup-btn" class="signup-btn">-->
+<!--            <a href="/login" class="login-link"><strong>로그인하기</strong></a>-->
+<!--        </button>-->
+    </h6>
+    </form>
+</div>
+
+</body>
+</html>
