@@ -1,6 +1,5 @@
 package com.DOH.DOH.mapper.list;
 
-import com.DOH.DOH.dto.list.ApplyDTO;
 import com.DOH.DOH.dto.list.ContestListDTO;
 import com.DOH.DOH.dto.list.PagingDTO;
 import org.apache.ibatis.annotations.Mapper;
@@ -14,5 +13,4 @@ public interface ContestListMapper {
     public ArrayList<ContestListDTO> getContestList(@Param("offset") int offset, @Param("pageSize") int pageSize);
 
     public int getTotalCount(); // 전체 게시물 수를 조회하는 메서드
-    public void saveContestApply(ApplyDTO dto);
 }

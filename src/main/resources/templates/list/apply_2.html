@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{/fragments/layout}">
+      layout:decorate="/fragments/layout">
 <head>
-    <link rel="stylesheet" th:href="@{/css/user/MyPageUpload.css}">
-    <script type="text/javascript" th:src="@{/js/user/MyPageUpload.js}"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/list/apply_2.css}">
+    <script th:src="@{/js/list/apply_2.js}"></script>
 </head>
+
 <th:block layout:fragment="content">
     <main>
         <div class="mainWarap">
             <div class="contestWarap">
                 <div class="contestInfo">
-                    <div class="day"></div>
-                    <div class="contitle">작품 업로드</div>
-                    <div class="applyInfo">
-                        <div class="info"></div>
-                        <div class="info"></div>
+                    <div class="day">
+                        <div class="endDate info">8일</div>
+                        <div class="type info">공공 기관</div>
                     </div>
-                </div> <!--contestInfo-->
+                    <div class="contitle">[포항문화재단] 포항국제불빛축체 브랜딩 콘테스트</div>
+                    <div class="applyInfo">
+                        <div class="info">총 상금 300만원</div>
+                        <div class="info">참여작 <span>9</span>개</div>
+                    </div>
+                </div><!--contestInfo-->
+                <a href="#">
+                    <div class="briefing">브리핑 확인하기</div>
+                </a>
             </div><!--contestWarap-->
+            
             
             <section>
                 <div class="applyContent">
                     <input type="text" placeholder="제목을 입력해주세요.">
-                    <div class="contArea"></div>
+                    <div class="contArea">
+
+                    </div>
                 </div>
+                <!-- </section> -->
+                <!-- <section> -->
                 <div class="applyWarap">
-                    <div class="applyInput">
+                    <div div class="applyInput">
                         <div class="InputArea">
                             <label for="image" class="imageUpload">
                                 <div class="content">
@@ -39,7 +50,7 @@
                             <input type="file" name="" id="image" multiple>
                         </div>
                         <div class="InputArea">
-                            <div class="contentText">
+                            <div class="content text">
                                 <span class="Image">
                                     <i class="fa-regular fa-pen-to-square"></i>
                                 </span>
@@ -47,17 +58,12 @@
                             </div>
                         </div>
                     </div><!--applyInput-->
-                    <button type="button" class="temporary">임시 저장</button>
-                    <button type="submit" class="apply">등록하기</button>
-                <div class="oc">
-                    <input type="radio" id="open" name="oc">
-                    <label for="open" class="open">공개</label>
-                    <input type="radio" id="close" name="oc">
-                    <label for="close" class="close">비공개</label>
-                </div>
-                <div class="back">
-                    <a href="/mypage" class="mypageback">마이페이지 돌아가기</a>
-                </div>
+                    <button type="button" class="temporary">
+                      임시 저장  
+                    </button>
+                    <button type="submit" class="apply">
+                      지원하기  
+                    </button>
                 </div><!--applyWarap-->
             </section>
         </div>

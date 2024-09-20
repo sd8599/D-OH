@@ -23,14 +23,16 @@ public class MainController {
 
     @GetMapping("/")
     public String main(Model model, Principal principal) {
-
-        String userEmail = userSessionService.userEmail();
-        String userRole = userSessionService.userRole();
-        String userNickName = userSessionService.nickName();
+        // Principal에서 사용자 이메일과 역할 가져오기
+        String userEmail = principal != null ? principal.getName() : "anonymousUser";
+        String userRole = principal != null ? SecurityContextHolder.getContext().getAuthentication().getAuthorities().iterator().next().getAuthority() : "ROLE_ANONYMOUS";
 
         log.info("userEmail : {}", userEmail);
         log.info("userRole : {}", userRole);
-        log.info("userNickName : {}",userNickName);
+
+        // Thymeleaf로 전달
+        model.addAttribute("userEmail", userEmail);
+        model.addAttribute("userRole", userRole);
 
         return "list/main"; // 해당 템플릿 파일로 리턴
     }

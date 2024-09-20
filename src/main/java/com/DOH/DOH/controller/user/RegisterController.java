@@ -37,6 +37,8 @@ public class RegisterController {
     @PostMapping("/users/register")
     public String showRegister(@ModelAttribute RegisterDTO registerDTO) {
 
+        System.out.println(registerDTO);
+
         registerService.register(registerDTO);
 
         return "redirect:/users/login";
