@@ -17,11 +17,8 @@ main {
     "sidebar commition";
 }
 
-.underline, .submit-button, .edit-profile {
+.underline {
   text-decoration-line: none;
-    color: #212529;
-    font-weight: bold;
-    margin-bottom: 10px;
 }
 
 .main-class .profilewrite {
@@ -66,23 +63,13 @@ main {
   display: block;
 }
 
-.profileOneLiner, .profileIntroduce {
-font-weight: bold;
-}
-
-/* 프로필 수정하기 버튼 스타일 */
 .sidebar .edit-profile {
-    background-color: white;
-    padding: 10px 15px;
-    text-decoration-line: none;
-    cursor: pointer;
-    color: #212529;
-    font-weight: bold;
-}
-
-.sidebar .edit-profile:hover {
-    background-color: #f8f9fa;
-    border-color: #adb5bd;
+  background-color: white;
+  padding: 10px 15px;
+  border: 2px solid whitesmoke;
+  text-decoration-line: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .sidebar .activity {
@@ -134,7 +121,7 @@ font-weight: bold;
 .sidebar .submit-button {
   padding: 5px 10px;
   font-size: 12px;
-  background-color: #212529;
+  background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 5px;
@@ -156,10 +143,14 @@ font-weight: bold;
   justify-content: center;
   align-items: center;
   height: 50px;
-  border:none;
+  border: 1px solid black;
 }
 
 .button-class .portfolio {
+  margin-left: auto;
+}
+
+.button-class .upload {
   margin-left: auto;
 }
 
