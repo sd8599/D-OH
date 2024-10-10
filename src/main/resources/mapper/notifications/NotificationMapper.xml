@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.DOH.DOH.mapper.notifications.NotificationMapper">
+
+    <!-- 전체 알림 조회 -->
+    <select id="selectAllNotifications" resultType="com.DOH.DOH.dto.notifications.NotificationDTO">
+        SELECT id, title, message, notification_type, created_at, is_active
+        FROM notifications
+    </select>
+
+    <!-- 특정 사용자의 알림 조회 -->
+    <select id="selectNotificationsByUser" resultType="com.DOH.DOH.dto.notifications.NotificationUserDTO">
+        SELECT nu.id, nu.notification_id, nu.userNum, nu.is_read, nu.read_at
+        FROM notification_users nu
+        WHERE nu.userNum = #{userNum}
+    </select>
+
+    <!-- 알림 생성 -->
+    <insert id="insertNotification" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO notifications (title, message, notification_type, is_active)
+        VALUES (#{title}, #{message}, #{notificationType}, #{isActive})
+    </insert>
+
+    <!-- 특정 사용자에게 알림 추가 -->
+    <insert id="insertNotificationForUser">
+        INSERT INTO notification_users (notification_id, userNum, is_read)
+        VALUES (#{notificationId}, #{userNum}, #{isRead})
+    </insert>
+
+    <!-- 읽음 상태 업데이트 -->
+    <update id="updateReadStatus">
+        UPDATE notification_users SET is_read = #{isRead}, read_at = NOW()
+        WHERE notification_id = #{notificationId} AND userNum = #{userNum}
+    </update>
+
+</mapper>
